@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### SQLite ###
+*.db
+*.db-shm
+*.db-wal
+
+### Environment ###
+.env
+.env.local
+application-local.properties
+application-local.yml
