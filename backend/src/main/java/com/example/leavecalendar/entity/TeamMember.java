@@ -13,19 +13,13 @@ public class TeamMember {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(nullable = false)
-    private String color;
-
     public TeamMember() {}
 
-    public TeamMember(String name, String color) {
+    public TeamMember(String name) {
         this.name = name;
-        this.color = color;
     }
 
     public Long getId() { return id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    public String getColor() { return color; }
-    public void setColor(String color) { this.color = color; }
 }

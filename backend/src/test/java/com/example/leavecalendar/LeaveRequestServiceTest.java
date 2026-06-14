@@ -36,7 +36,7 @@ class LeaveRequestServiceTest {
     void setUp() {
         leaveRequestRepository.deleteAll();
         teamMemberRepository.deleteAll();
-        alice = teamMemberRepository.save(new TeamMember("Alice", "#22c55e"));
+        alice = teamMemberRepository.save(new TeamMember("Alice"));
     }
 
     @Test

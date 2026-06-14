@@ -21,10 +21,10 @@ public class TeamMemberService {
 
     public void seedIfEmpty() {
         if (repository.count() == 0) {
-            repository.save(new TeamMember("Alice", "#22c55e"));
-            repository.save(new TeamMember("Bob", "#3b82f6"));
-            repository.save(new TeamMember("Charlie", "#f97316"));
-            repository.save(new TeamMember("Diana", "#a855f7"));
+            repository.save(new TeamMember("Alice"));
+            repository.save(new TeamMember("Bob"));
+            repository.save(new TeamMember("Charlie"));
+            repository.save(new TeamMember("Diana"));
         }
     }
 }
