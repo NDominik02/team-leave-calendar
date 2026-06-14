@@ -177,6 +177,7 @@ export default function CalendarGrid({
                   const existing = getLeaveStatusForCell(member.id, dateStr);
                   const isSelected = selected[member.id]?.has(dateStr) ?? false;
                   const isWeekend = day.isoWeekday() >= 6;
+                  const isPast = day.isBefore(dayjs(), "day");
 
                   return (
                     <td
@@ -184,13 +185,14 @@ export default function CalendarGrid({
                       className={[
                         "day-cell",
                         isWeekend ? "weekend" : "",
+                        isPast ? "past" : "",
                         existing
                           ? `status-${existing.status.toLowerCase()}`
                           : "",
                         isSelected ? "selected" : "",
                       ].join(" ")}
                       onClick={() =>
-                        !existing && !isWeekend && toggleCell(member.id, dateStr)
+                        !existing && !isWeekend && !isPast && toggleCell(member.id, dateStr)
                       }
                       title={
                         existing

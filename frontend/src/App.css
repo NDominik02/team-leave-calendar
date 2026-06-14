@@ -87,6 +87,8 @@ body { font-family: system-ui, sans-serif; background: #f8fafc; color: #1e293b; 
 .day-col.weekend .day-num { color: #ef4444; }
 .day-cell.weekend { background: #fff1f2; cursor: not-allowed; }
 .day-cell.weekend:hover { background: #fff1f2; }
+.day-cell.past { background: #f8fafc; cursor: not-allowed; color: #cbd5e1; }
+.day-cell.past:hover { background: #f8fafc; }
 .day-cell.status-pending { background: #fef9c3; cursor: default; }
 .day-cell.status-approved { background: #dcfce7; cursor: default; }
 .day-cell.status-rejected { background: #fee2e2; cursor: default; }
