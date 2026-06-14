@@ -65,7 +65,7 @@ export default function OnCallSchedule({ schedule, onRefresh }) {
                 {availableMembers.length === 0 && (
                   <p className="empty-msg">No available members this week.</p>
                 )}
-                {availableMembers.map((m) => (
+                {availableMembers.filter((m) => m.id !== expandedWeek.memberId).map((m) => (
                   <button
                     key={m.id}
                     className="override-member-btn"
